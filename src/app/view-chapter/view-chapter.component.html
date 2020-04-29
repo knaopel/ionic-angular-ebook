@@ -1,0 +1,32 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons>
+      <ion-back-button [text]="getBackButtonText()" defaultHref="/"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content [fullscreen]="true" *ngIf="chapter">
+  <div class="ion-padding">
+    <h1>{{chapter.title}}</h1>
+    <p>
+      {{chapter.text}}
+    </p>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button [disabled]="!shouldNavigateBack()">
+        <a href="/chapter/{{chapter.id - 1}}">&laquo; Previous Chapter</a>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button [disabled]="!shouldNavigateFwd()">
+        <a href="/chapter/{{chapter.id + 1}}">Next Chapter &raquo;</a>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>
