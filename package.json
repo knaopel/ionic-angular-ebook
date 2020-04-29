@@ -1,8 +1,11 @@
 {
-  "name": "krotech-ionic-ebook",
-  "version": "0.0.1",
-  "author": "Ionic Framework",
-  "homepage": "https://ionicframework.com/",
+  "name": "ionic-angular-ebook",
+  "version": "0.0.5",
+  "author": "Kurt Opel",
+  "license": "ISC",
+  "repository": {
+    "url": "git@github.com:knaopel/ionic-angular-ebook.git"
+  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -51,5 +54,5 @@
     "tslint": "~5.15.0",
     "typescript": "~3.4.3"
   },
-  "description": "An Ionic project"
+  "description": "An Ionic Angular Demo"
 }
